@@ -1,0 +1,13 @@
+version: "2"
+services:
+    www:
+        build: .
+        ports:
+            - "8888:80"
+            - "8889:443"
+        volumes:
+            - ./:/var/www/html/
+        networks:
+            - default   
+volumes:
+    persistent:
